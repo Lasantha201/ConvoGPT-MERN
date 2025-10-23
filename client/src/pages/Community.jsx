@@ -1,18 +1,39 @@
-import React, { useState, useEffect } from 'react' // ✅ Added useEffect
-import { dummyPublishedImages } from '../assets/assets'
+import React, { useState, useEffect } from 'react'; // ✅ Added useEffect
+import { dummyPublishedImages } from '../assets/assets';
+import { useAppContext } from '../context/AppContext';
+import toast from 'react-hot-toast';
 
 const Community = () => {
 
-    const [images, setImages] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { axios } = useAppContext();
 
     const fetchImages = async () => {
-        setImages(dummyPublishedImages)
-        setLoading(false)
+
+        try {
+
+            const { data } = await axios.get('/api/user/published-images');
+
+            if (data.success) {
+
+                setImages(data.images);
+
+            } else {
+                toast.error(data.message);
+            }
+
+        } catch (error) {
+
+            toast.error(error.message);
+
+        }
+
+        setLoading(false);
     }
 
     useEffect(() => {
-        fetchImages()
+        fetchImages();
     }, [])
 
 

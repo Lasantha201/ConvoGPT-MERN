@@ -28,3 +28,23 @@
 .loader div:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+/* Applies to all code blocks and text areas */
+pre,
+code,
+p {
+  white-space: pre-wrap;
+  /* Wrap long lines */
+  word-wrap: break-word;
+  /* Break long words */
+  overflow-wrap: break-word;
+  /* Handle long URLs or code */
+}
+
+/* Prevent horizontal scroll for long code blocks */
+pre {
+  overflow-x: auto;
+  /* Allows scrolling instead of overflow */
+  max-width: 100%;
+  /* Keeps it within the container */
+}
