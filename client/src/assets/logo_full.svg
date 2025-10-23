@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="193" height="46" viewBox="0 0 193 46" fill="none">
+  <!-- Icon: dark-mode friendly gradient -->
+  <defs>
+    <linearGradient id="gradDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6EC6FF"/>
+      <stop offset="1" stop-color="#A678F9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background with gradient -->
+  <rect x="0.5" y="0.5" width="44" height="44" rx="10" fill="url(#gradDark)" />
+
+  <!-- Bot face icon inside -->
+  <g transform="translate(8,8) scale(0.7)" fill="#FFFFFF">
+    <path d="M32 4H12C9.8 4 8 5.8 8 8V28C8 30.2 9.8 32 12 32H18V36L24 32H32C34.2 32 36 30.2 36 28V8C36 5.8 34.2 4 32 4Z"/>
+    <circle cx="18" cy="20" r="2" fill="#222222"/>
+    <circle cx="26" cy="20" r="2" fill="#222222"/>
+  </g>
+
+  <!-- Text: Convo (light gray) + GPT (light purple) -->
+  <g transform="translate(56, 31)">
+    <text x="0" y="0" font-family="Segoe UI, Roboto, Arial, sans-serif"
+          font-size="18" font-weight="700" fill="#E0E0E0">Convo</text>
+    <text x="68" y="0" font-family="Segoe UI, Roboto, Arial, sans-serif"
+          font-size="18" font-weight="700" fill="#B388FF">GPT</text>
+  </g>
+</svg>
