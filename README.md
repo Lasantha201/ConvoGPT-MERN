@@ -38,73 +38,41 @@ ConvoGPT is a full-stack MERN (MongoDB, Express, React, Node.js) web application
 ```bash
 git clone https://github.com/Lasantha201/ConvoGPT-MERN.git
 cd ConvoGPT
-Build Docker images for backend and frontend:
 
+2. Build Docker images for backend and frontend:
+bash docker-compose up --build 3. Start the containers:
 bash
-Copy code
-docker-compose up --build
-Start the containers:
-
-bash
-Copy code
 docker-compose up
-Access the app in your browser:
 
-Backend: http://localhost:5000
+4. Your app is available at:
 
-Frontend: http://localhost:3000
-
-Docker Deployment
-If you want to push your Docker images to DockerHub and deploy:
-
-Tag your images:
-
+Backend:
+bash http://localhost:5000 Frontend:
 bash
-Copy code
-docker tag convogpt-server lasantha738/convogpt-server:latest
-docker tag convogpt-frontend lasantha738/convogpt-frontend:latest
-Login to DockerHub:
+ http://localhost:3000
 
-bash
-Copy code
-docker login
-Push the images:
+---
 
-bash
-Copy code
-docker push lasantha738/convogpt-server:latest
-docker push lasantha738/convogpt-frontend:latest
-Pull and run the images on any machine:
+## Usage
 
-bash
-Copy code
-docker pull lasantha738/convogpt-server:latest
-docker pull lasantha738/convogpt-frontend:latest
-docker run -p 5000:3000 lasantha738/convogpt-server:latest
-docker run -p 3000:3000 lasantha738/convogpt-frontend:latest
-Usage
-Open the frontend in your browser.
+Open the frontend in the browser
+Start chatting with ConvoGPT
+Backend handles API requests, and MongoDB stores chat data
 
-Start chatting with ConvoGPT.
+---
 
-Backend handles API requests, and MongoDB stores chat data.
+## Contributing
 
-Contributing
-Fork the repository.
+Fork the repository
 
-Create a new branch for your feature/fix:
+Create a new branch for your feature/fix
 
-bash
-Copy code
-git checkout -b feature/your-feature-name
-Commit your changes:
+Commit changes and push
 
-bash
-Copy code
-git commit -m "Add your message here"
-Push to your branch:
+Open a Pull Request
 
-bash
-Copy code
-git push origin feature/your-feature-name
-Open a Pull Request on the main repository.
+---
+
+
+
+
