@@ -1,6 +1,6 @@
 # ConvoGPT
 
-ConvoGPT is a full-stack MERN (MongoDB, Express, React, Node.js) web application with Docker support. It includes a backend server and a frontend client, designed to provide a conversational AI experience.  
+ConvoGPT is a full-stack MERN (MongoDB, Express, React, Node.js) web application with Docker support. It includes a backend server and a frontend client, designed to provide a conversational AI experience.
 
 ---
 
@@ -38,46 +38,73 @@ ConvoGPT is a full-stack MERN (MongoDB, Express, React, Node.js) web application
 ```bash
 git clone https://github.com/Lasantha201/ConvoGPT-MERN.git
 cd ConvoGPT
+Build Docker images for backend and frontend:
 
-2. Build Docker images for backend and frontend:
-```bash
+bash
+Copy code
 docker-compose up --build
+Start the containers:
 
-3. Start the containers:
-```bash
+bash
+Copy code
 docker-compose up
+Access the app in your browser:
 
-4. Your app is available at:
+Backend: http://localhost:5000
 
-Backend:
-```bash
- http://localhost:5000
+Frontend: http://localhost:3000
 
-Frontend:
-```bash
- http://localhost:3000
+Docker Deployment
+If you want to push your Docker images to DockerHub and deploy:
 
----
+Tag your images:
 
-## Usage
+bash
+Copy code
+docker tag convogpt-server lasantha738/convogpt-server:latest
+docker tag convogpt-frontend lasantha738/convogpt-frontend:latest
+Login to DockerHub:
 
-Open the frontend in the browser
-Start chatting with ConvoGPT
-Backend handles API requests, and MongoDB stores chat data
+bash
+Copy code
+docker login
+Push the images:
 
----
+bash
+Copy code
+docker push lasantha738/convogpt-server:latest
+docker push lasantha738/convogpt-frontend:latest
+Pull and run the images on any machine:
 
-## Contributing
+bash
+Copy code
+docker pull lasantha738/convogpt-server:latest
+docker pull lasantha738/convogpt-frontend:latest
+docker run -p 5000:3000 lasantha738/convogpt-server:latest
+docker run -p 3000:3000 lasantha738/convogpt-frontend:latest
+Usage
+Open the frontend in your browser.
 
-Fork the repository
+Start chatting with ConvoGPT.
 
-Create a new branch for your feature/fix
+Backend handles API requests, and MongoDB stores chat data.
 
-Commit changes and push
+Contributing
+Fork the repository.
 
-Open a Pull Request
+Create a new branch for your feature/fix:
 
----
+bash
+Copy code
+git checkout -b feature/your-feature-name
+Commit your changes:
 
+bash
+Copy code
+git commit -m "Add your message here"
+Push to your branch:
 
-
+bash
+Copy code
+git push origin feature/your-feature-name
+Open a Pull Request on the main repository.
