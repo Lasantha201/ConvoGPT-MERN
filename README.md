@@ -36,5 +36,43 @@ ConvoGPT is a full-stack MERN (MongoDB, Express, React, Node.js) web application
 ## Setup & Run (Locally)
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/ConvoGPT.git
+git clone https://github.com/Lasantha201/ConvoGPT-MERN.git
 cd ConvoGPT
+
+2. Build Docker images for backend and frontend:
+```bash
+docker-compose up --build
+
+3. Start the containers:
+```bash
+docker-compose up
+
+4. Your app is available at:
+
+Backend:
+```bash
+ http://localhost:5000
+
+Frontend:
+```bash
+ http://localhost:3000
+
+## Usage
+
+Open the frontend in the browser
+Start chatting with ConvoGPT
+Backend handles API requests, and MongoDB stores chat data
+
+
+## Contributing
+
+Fork the repository
+
+Create a new branch for your feature/fix
+
+Commit changes and push
+
+Open a Pull Request
+
+
+
