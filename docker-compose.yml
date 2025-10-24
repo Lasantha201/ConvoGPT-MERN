@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  # Backend API service
+  server:
+    build: ./server
+    container_name: server_container
+    ports:
+      - "5000:3000" # Host 5000 → container 3000 (internal)
+    volumes:
+      - ./server:/app # Enable hot reload
+      - /app/node_modules
+    environment:
+      - MONGO_URL=mongodb+srv://deepcoder:deepcoder2003@cluster0.qgtm906.mongodb.net
+
+  # Frontend client service
+  frontend:
+    build: ./client
+    container_name: client_container
+    ports:
+      - "3000:3000" # Host 3000 → container 3000
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./client:/app:cached
+      - /app/node_modules
