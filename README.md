@@ -57,12 +57,15 @@ Frontend:
 ```bash
  http://localhost:3000
 
+---
+
 ## Usage
 
 Open the frontend in the browser
 Start chatting with ConvoGPT
 Backend handles API requests, and MongoDB stores chat data
 
+---
 
 ## Contributing
 
@@ -73,6 +76,8 @@ Create a new branch for your feature/fix
 Commit changes and push
 
 Open a Pull Request
+
+---
 
 
 
